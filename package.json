@@ -1,0 +1,25 @@
+{
+  "name": "breads",
+  "version": "1.0.0",
+  "description": "Express Full CRUD with SSR JSX",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonescha1/breads.git"
+  },
+  "author": "Chase Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonescha1/breads/issues"
+  },
+  "homepage": "https://github.com/jonescha1/breads#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
