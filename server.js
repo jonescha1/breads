@@ -12,7 +12,13 @@ app.get("/", (req, res) => {
   res.send("Welcome to an App about Breads!");
 });
 
+// Breads
+const breadsController = require("./controllers/breads_controller");
+app.use("/breads", breadsController);
+
 // Listen
 app.listen(PORT, () => {
-  console.log(chalk.bold.magentaBright(`Server started on Port: ${PORT}`));
+  console.log(
+    chalk.bold.bgWhiteBright.magentaBright(`Server started on Port: ${PORT}`)
+  );
 });
