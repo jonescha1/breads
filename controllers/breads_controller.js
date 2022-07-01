@@ -7,7 +7,9 @@ const breads = express.Router();
 
 // INDEX
 breads.get("/", (req, res) => {
-  res.send(Bread);
+  res.render("index", {
+    breads: Bread,
+  });
 });
 
 // SHOW
