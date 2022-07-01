@@ -8,3 +8,5 @@ function Index() {
     </Default>
   );
 }
+
+module.exports = Index;
