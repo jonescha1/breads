@@ -9,7 +9,13 @@ function New() {
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" required />
         <label htmlFor="image">Image</label>
-        <input type="text" name="image" id="image" />
+        <input
+          type="text"
+          name="image"
+          id="image"
+          pattern="https?://.+"
+          title="Include http:// or https:// and make sure this field is not blank!"
+        />
         <label htmlFor="hasGluten">Has Gluten?</label>
         <input type="checkbox" name="hasGluten" id="hasGluten" defaultChecked />
         <br />
