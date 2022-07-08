@@ -18,6 +18,11 @@ function Default(html) {
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="/main.css" />
+        <link
+          rel="shortcut icon"
+          type="image/jpg"
+          href="https://html.sammy-codes.com/images/small-profile.jpeg"
+        />
       </head>
       <body>
         <div className="wrapper">
