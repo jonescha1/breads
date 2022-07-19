@@ -1,12 +1,20 @@
 // DEPENDENCIES
 const express = require("express");
 const methodOverride = require("method-override");
+const mongoose = require("mongoose");
 const chalk = require("chalk");
 
 // CONFIGURATION
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 8000; // Port variable that is retrieved from the .env file.
+mongoose.connect(
+  process.env.MONGO_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("connected to mongo: ", process.env.MONGO_URI);
+  }
+);
 
 // MIDDLEWARE
 app.set("views", __dirname + "/views");
