@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const express = require("express");
 const Bread = require("../models/bread");
+const Baker = require("../models/baker");
 
 // CONFIGURATION
 const breads = express.Router();
@@ -63,7 +64,11 @@ breads.post("/", (req, res) => {
 
 // NEW
 breads.get("/new", (req, res) => {
-  res.render("new");
+  Baker.find().then((foundBakers) => {
+    res.render("new", {
+      bakers: foundBakers,
+    });
+  });
 });
 
 // DELETE
