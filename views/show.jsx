@@ -1,9 +1,9 @@
 const React = require("react");
 const Default = require("./layouts/default");
 
-function Show({ bread, index }) {
+function Show({ bread }) {
   // The below console log is used for debugging to confirm we are getting our bread data.
-  console.log(bread.name);
+  console.log(bread);
   return (
     <Default>
       <h3>{bread.name}</h3>
@@ -14,11 +14,11 @@ function Show({ bread, index }) {
       </p>
 
       <img src={bread.image} alt={bread.name} />
-      <a href={`/breads/${index}/edit`}>
+      <a href={`/breads/${bread.id}/edit`}>
         <button>Edit</button>
       </a>
 
-      <form action={`/breads/${index}?_method=DELETE`} method="POST">
+      <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>
 
