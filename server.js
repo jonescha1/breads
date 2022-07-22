@@ -12,7 +12,10 @@ mongoose.connect(
   process.env.MONGO_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
-    console.log("connected to mongo: ", process.env.MONGO_URI);
+    console.log(
+      chalk.blueBright.bgWhiteBright.bold("connected to mongo: "),
+      chalk.blueBright(process.env.MONGO_URI)
+    );
   }
 );
 
@@ -44,7 +47,5 @@ app.get("*", (req, res) => {
 
 // Listen
 app.listen(PORT, () => {
-  console.log(
-    chalk.bold.bgWhiteBright.magentaBright(`Server started on Port: ${PORT}`)
-  );
+  console.log(chalk.bold.magentaBright(`Server started on Port: ${PORT}`));
 });
